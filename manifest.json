@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 1,
+  "skills": [
+    {
+      "name": "api-engineer",
+      "plugin": "postman",
+      "description": "Use when an HTTP API task spans several steps, such as building a new endpoint end to end with its contract, implementation, tests and mocks, or when it is API work and no narrower Postman skill fits. Prefer the narrower Postman skill when one fits. Routes to the relevant Postman skills and keeps contracts, tests and mocks reusable across the work, using organization-wide dependency context. Not for UI-only changes, library or CLI code, or questions about what existing code does. Use for requests such as \"implement this endpoint\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/api-engineer/SKILL.md",
+          "bytes": 6291,
+          "sha256": "c6c249c302718dc57088e4cfd9b77c6176cb3c2f8d796caf98fe66f1d0d18205"
+        }
+      ]
+    },
+    {
+      "name": "ai-readiness",
+      "plugin": "postman",
+      "description": "Use when assessing or improving how well AI agents can discover, call, and recover from errors with an API. Scores an existing Postman collection or OpenAPI spec and turns measured gaps into contract improvements; supports a separate CI readiness threshold. Use for requests such as \"is this API ready for agents\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/ai-readiness/SKILL.md",
+          "bytes": 2838,
+          "sha256": "ac93e38506048982897f70d47db53165759922dc050e8d8b51e54678ef208d25"
+        }
+      ]
+    },
+    {
+      "name": "api-discovery",
+      "plugin": "postman",
+      "description": "Use when finding an API or owner, integrating a public provider, locating Postman resources, or investigating consumers and change impact across services. Turns discovered contracts and mocks into reusable dependencies and identifies evidence outside the current checkout. Use for requests such as \"who consumes this endpoint\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/api-discovery/SKILL.md",
+          "bytes": 4582,
+          "sha256": "539c705809c5dbdf5d6e747415e40adf21f85b15ef2519dade849a92d195f57e"
+        },
+        {
+          "target": "reference/orbit.md",
+          "source": "skills/api-discovery/reference/orbit.md",
+          "bytes": 4078,
+          "sha256": "792c6c96db431afb508435e60c1f957cbb6a629320b7b61c26a8f78d477844dc"
+        }
+      ]
+    },
+    {
+      "name": "api-documentation",
+      "plugin": "postman",
+      "description": "Use when defining or improving an API contract, generating documentation from a collection or OpenAPI spec, publishing API docs, or sharing a documentation link. Makes auth, inputs, responses, and examples reusable by callers, tests, and mocks. Use for requests such as \"publish API docs\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/api-documentation/SKILL.md",
+          "bytes": 2845,
+          "sha256": "c7e4eef6d451f556caca2cfebdf9ac82448cce19c617006bfb8eaff9203b0832"
+        },
+        {
+          "target": "reference/rest-api-best-practices.md",
+          "source": "skills/api-documentation/reference/rest-api-best-practices.md",
+          "bytes": 2995,
+          "sha256": "af4f5bb2ec4f7ece778c3f9bf47743b3a3c7959ae19152b6f04b91587122a3c5"
+        }
+      ]
+    },
+    {
+      "name": "api-mocking",
+      "plugin": "postman",
+      "description": "Use when something needs an API that isn't built or reachable yet (a frontend, client or demo), when other teams should build against your API before it ships, or when asked to mock an API or fake a backend. Finds, builds, runs and publishes a stand-in for one API — a published mock when its owner or a verified publisher has one, otherwise one built from its spec or collection that behaves like the real API, stateful when callers write then read. To run and test your own code against the services it calls, use api-simulation. Covers `postman mock` and `postman dependency add mock`.",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/api-mocking/SKILL.md",
+          "bytes": 7943,
+          "sha256": "be30e96e7b22eb860a19a629f8f1377ed51a9882adbc64ee6163b4080f61ed48"
+        }
+      ]
+    },
+    {
+      "name": "api-monitoring",
+      "plugin": "postman",
+      "description": "Use when setting up recurring API checks, running or diagnosing a Postman Monitor, changing its schedule, or reaching private APIs through a self-hosted runner. Reuses collection assertions to detect live regressions and traces failures to individual run evidence. Use for requests such as \"check this API every minute\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/api-monitoring/SKILL.md",
+          "bytes": 4582,
+          "sha256": "17d55bdbac883272e0f6f3c84d237788a16d375a44912b7ffda3b3225b38a05d"
+        }
+      ]
+    },
+    {
+      "name": "api-simulation",
+      "plugin": "postman",
+      "description": "Use when you add or change code that calls other services and need to run it, test it, prove a fix or reproduce an upstream failure (timeouts, 5xx, 409, 429) end to end, locally or in CI, without the real services because they're unreachable, need credentials, cost money, have side effects or don't exist yet. Also use it to answer what happens to a request, or to the data it writes, when a service it calls goes down, is slow or returns errors (\"what happens to a booking if the email service is down?\"). Runs services, frontends, tests or demos against stand-ins for their HTTP dependencies, served as one environment locally or at a deployed URL. Applies even when nobody says mock or simulation; a `postman/simulations/` directory is itself a reason to load it. To give a frontend or another team a stand-in for an API, use api-mocking. Covers `postman simulation`.",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/api-simulation/SKILL.md",
+          "bytes": 12782,
+          "sha256": "a731b0933c66659deba5551e2c4bb495008a3593e4b1facf9e3bc970b29d904a"
+        },
+        {
+          "target": "reference/context_file.md",
+          "source": "skills/api-simulation/reference/context_file.md",
+          "bytes": 10413,
+          "sha256": "e3c98791c833a0a967c60c06c8519a7dabd04f03e29c6ca7bca4431fcea85c62"
+        },
+        {
+          "target": "reference/sim_yaml_schema.md",
+          "source": "skills/api-simulation/reference/sim_yaml_schema.md",
+          "bytes": 3835,
+          "sha256": "70d5973bfc8ff39efd455f89fc40e05b16507c17b236594bcc87979fc0d6ee02"
+        }
+      ]
+    },
+    {
+      "name": "api-testing",
+      "plugin": "postman",
+      "description": "Use when testing an endpoint with real HTTP requests, running collection assertions, or checking real application traffic against an API contract. Not for unit tests of internal functions. Reuses saved requests and reports what live, mocked, or captured-traffic results actually establish. Use for requests such as \"test this endpoint\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/api-testing/SKILL.md",
+          "bytes": 3592,
+          "sha256": "da517234afc63959bd7fc83b89f329573c7ad61abc88c0d6bda166ef1905a46e"
+        }
+      ]
+    },
+    {
+      "name": "application-testing",
+      "plugin": "postman",
+      "description": "Use when connecting Playwright end-to-end tests to Postman — capturing their network traffic, generating a collection from that traffic, matching it against a collection contract, measuring which APIs the tests cover, setting it up in CI, or debugging why capture shows nothing. Runs `postman application test`, which wraps Playwright, runs pm.test assertions on captured traffic and publishes results to Application Inventory. Covers the Postman side only, not Playwright test authoring or Playwright failures unrelated to capture. Use for requests such as \"connect my Playwright tests to Postman\" or \"which APIs are my e2e tests not hitting\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/application-testing/SKILL.md",
+          "bytes": 11315,
+          "sha256": "b56071fa141a749339494cbb272f45b6861bed1025bc9a19f6ab026d751258d6"
+        }
+      ]
+    },
+    {
+      "name": "ci-integration",
+      "plugin": "postman",
+      "description": "Use when adding API tests, structural or governance lint, or AI-readiness gates to CI, or publishing reviewed API artifacts to a Postman workspace after merge. Makes contract checks repeatable and separates validation from shared workspace changes. Use for requests such as \"run this collection on every PR\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/ci-integration/SKILL.md",
+          "bytes": 4393,
+          "sha256": "5005e76f31ac0b76bfdeca9518700d62711a100cfe3a2d7b627d313ecc34ac2b"
+        }
+      ]
+    },
+    {
+      "name": "cli-install",
+      "plugin": "postman",
+      "description": "Use when the Postman CLI is missing or can't be installed, or when `postman` is \"command not found\". Installs the CLI globally so `postman` is on `PATH`, with a fallback to the hosted MCP server when installing is blocked. Use for requests such as \"install the Postman CLI\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/cli-install/SKILL.md",
+          "bytes": 1097,
+          "sha256": "41a2036b49bfca591d8a96b8f617d1cdc714439a016025cd2c0f57f1b2967adc"
+        }
+      ]
+    },
+    {
+      "name": "collection-schema-v3",
+      "plugin": "postman",
+      "description": "Use when writing or debugging local Postman v3 collection, environment or globals files, including collection lint failures. Preserves the per-entity files, inherited context, and schema shapes that make API changes reusable and reviewable in Git. Use for requests such as \"fix this request YAML\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/collection-schema-v3/SKILL.md",
+          "bytes": 4089,
+          "sha256": "0e4ae2c862c7f525404c35239008ccccea98e19bd07be4ac5939793f8769b540"
+        },
+        {
+          "target": "reference/environment.md",
+          "source": "skills/collection-schema-v3/reference/environment.md",
+          "bytes": 2232,
+          "sha256": "b2a34943987af5345d97cd01acbe1eeed56ce27ab905055291d626c530fbff50"
+        },
+        {
+          "target": "reference/globals.md",
+          "source": "skills/collection-schema-v3/reference/globals.md",
+          "bytes": 1213,
+          "sha256": "0d5f8526e88521ae111733eecd1aa55e1dfbad40e6ddf7a263a08220f2ac8919"
+        },
+        {
+          "target": "reference/http.md",
+          "source": "skills/collection-schema-v3/reference/http.md",
+          "bytes": 9881,
+          "sha256": "d7225d2c6230e54085393c2d26cbc8e61c9552380562f0137f33f72b99ad7f2a"
+        },
+        {
+          "target": "reference/other_protocols.md",
+          "source": "skills/collection-schema-v3/reference/other_protocols.md",
+          "bytes": 7664,
+          "sha256": "e9cec071417d1da9bad850029b03f883404c75384f4e69ffb84b7221b8311a3c"
+        }
+      ]
+    },
+    {
+      "name": "datasets",
+      "plugin": "postman",
+      "description": "Use when creating or repairing dataset manifests, or when a collection needs queried or joined test inputs, a reusable named view, spreadsheet worksheet data, live database rows, or script access through pm.datasets(). Chooses between a simple iteration file and a dataset while preserving query semantics, portability, and credential boundaries. Use for requests such as \"run this collection over database rows\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/datasets/SKILL.md",
+          "bytes": 5975,
+          "sha256": "01284a2267e06d6dfb7f51367f766dc14122b9b190fb048563d5ed28476b7a17"
+        },
+        {
+          "target": "reference/schema.md",
+          "source": "skills/datasets/reference/schema.md",
+          "bytes": 1868,
+          "sha256": "69daa658202bed710004c2864e79d914b331ac7ce77d86241ea897f72947127e"
+        },
+        {
+          "target": "reference/spreadsheets.md",
+          "source": "skills/datasets/reference/spreadsheets.md",
+          "bytes": 1523,
+          "sha256": "c2a058263b3bfa12c453c11df9d24343d7274dbb338ed7ad99d9a82894f337f1"
+        }
+      ]
+    },
+    {
+      "name": "flows",
+      "plugin": "postman",
+      "description": "Use when running, deploying, or debugging an existing Postman Flow. Distinguishes local graph execution from a deployed webhook, reuses named input scenarios, and follows a run to the failing block rather than treating an HTTP response as whole-flow success. Use for requests such as \"why did this flow fail\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/flows/SKILL.md",
+          "bytes": 3977,
+          "sha256": "535ba20cf1a3506136682938b926b1c183ddcbb098abb863a3e6f0259365db6b"
+        },
+        {
+          "target": "reference/flow_cli_flags.md",
+          "source": "skills/flows/reference/flow_cli_flags.md",
+          "bytes": 5698,
+          "sha256": "aa75d1ad929351bc4ef37e96b2a1cfef80ec1cced0003242bd1129f00618e221"
+        }
+      ]
+    },
+    {
+      "name": "mcp-testing",
+      "plugin": "postman",
+      "description": "Use when checking, debugging or writing tests for an MCP server, local or remote, whoever built it. Use for requests such as \"does my MCP server work\", \"why does this tool call fail\", \"connect to this MCP URL\" or \"make sure these tools keep working\". Not for using Postman's own MCP tools on a workspace; that is postman-mcp-server.",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/mcp-testing/SKILL.md",
+          "bytes": 4982,
+          "sha256": "9f192c72163c55c6a548274742096b25670c8546a7039251ec197fb3a737b21b"
+        }
+      ]
+    },
+    {
+      "name": "performance-testing",
+      "plugin": "postman",
+      "description": "Use when load-testing or benchmarking an API with concurrent virtual users and latency or error thresholds, or when importing or migrating a JMeter `.jmx` plan or a Gatling simulation (Java/Kotlin/Scala/JS/TS) into a Postman collection plus a `postman performance run` configuration. Reuses a collection to probe a chosen failure mode and distinguishes target limits from load-generator limits. Use for requests such as \"load test this API\", \"import my JMeter plan\", or \"convert my Gatling project to Postman\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/performance-testing/SKILL.md",
+          "bytes": 5146,
+          "sha256": "9bb544fab3a1ceba9ff725b98b05ce90023b924a1e3323cbcd4ace674394d68b"
+        },
+        {
+          "target": "references/gatling-import/README.md",
+          "source": "skills/performance-testing/references/gatling-import/README.md",
+          "bytes": 12510,
+          "sha256": "366f80efde1beba5c32a93ffeb881256163d586c6bbc7dfeaddd37147353378c"
+        },
+        {
+          "target": "references/gatling-import/feeders.md",
+          "source": "skills/performance-testing/references/gatling-import/feeders.md",
+          "bytes": 3498,
+          "sha256": "036465bcbfd648bc07ab18de2346aa1915e07e7254f67b598c9837bb4718cc4e"
+        },
+        {
+          "target": "references/gatling-import/injection.md",
+          "source": "skills/performance-testing/references/gatling-import/injection.md",
+          "bytes": 10523,
+          "sha256": "8504c8df5f16807225efd58cc364fd32230a53776b543eb85859c20af36f9b8b"
+        },
+        {
+          "target": "references/gatling-import/mapping.md",
+          "source": "skills/performance-testing/references/gatling-import/mapping.md",
+          "bytes": 11150,
+          "sha256": "cf8db5e4e1aadb23699667b2059b14b3f3100e35ec9b648a3407b048ea34b365"
+        },
+        {
+          "target": "references/gatling-import/unsupported.md",
+          "source": "skills/performance-testing/references/gatling-import/unsupported.md",
+          "bytes": 3222,
+          "sha256": "d45d48d27c16b378c91ba0d020169a0d4502c8c2c25e55597925e2a143094104"
+        },
+        {
+          "target": "references/jmeter-import/README.md",
+          "source": "skills/performance-testing/references/jmeter-import/README.md",
+          "bytes": 7579,
+          "sha256": "7990ff904b234e40078d9ed29609f29b3c7df7340b77ef10618fd2fbc3aed3fd"
+        },
+        {
+          "target": "references/jmeter-import/import-report.md",
+          "source": "skills/performance-testing/references/jmeter-import/import-report.md",
+          "bytes": 1859,
+          "sha256": "76e83f73c932003294cdc7832c4c63071a0dde487a687cfbe9d4e68b6b9366a5"
+        },
+        {
+          "target": "references/jmeter-import/mapping-table.md",
+          "source": "skills/performance-testing/references/jmeter-import/mapping-table.md",
+          "bytes": 5921,
+          "sha256": "f4dd409b97354fe68b870f6daf234b4e1d678d2c6d6fb074bd2aa75c8c6551d3"
+        },
+        {
+          "target": "references/jmeter-import/postman-perf-capabilities.md",
+          "source": "skills/performance-testing/references/jmeter-import/postman-perf-capabilities.md",
+          "bytes": 3739,
+          "sha256": "9791ef71c13bc3c55c60c3965f16743409ba1547a4dad1630c5b523c49b57c46"
+        },
+        {
+          "target": "references/jmeter-import/script-translation.md",
+          "source": "skills/performance-testing/references/jmeter-import/script-translation.md",
+          "bytes": 5709,
+          "sha256": "0d3e4a91aabb136808c01d94fe8919d28286a3683d4a0b16ec5f2e1c413c81fc"
+        },
+        {
+          "target": "references/readyapi-import/README.md",
+          "source": "skills/performance-testing/references/readyapi-import/README.md",
+          "bytes": 8240,
+          "sha256": "2ba0f7fc3ed63cc359a29587c233125ce3f69120703a2715ad4a8aaed886ff56"
+        },
+        {
+          "target": "references/readyapi-import/import-report.md",
+          "source": "skills/performance-testing/references/readyapi-import/import-report.md",
+          "bytes": 1616,
+          "sha256": "b15dca0f05aa4e93a41e2c25eed72700eea9d7946493a1a27d2cc122b32752a0"
+        },
+        {
+          "target": "references/readyapi-import/loadtest-to-perf.md",
+          "source": "skills/performance-testing/references/readyapi-import/loadtest-to-perf.md",
+          "bytes": 5226,
+          "sha256": "60053ca80f1027d5920262928419666efa73f137202bf1b23814cc933b814160"
+        },
+        {
+          "target": "references/readyapi-import/mapping-table.md",
+          "source": "skills/performance-testing/references/readyapi-import/mapping-table.md",
+          "bytes": 8849,
+          "sha256": "c66c31533cd34b3ac3f45d38b01485ba482dfab87ded9a79a837cf188b733a7b"
+        },
+        {
+          "target": "references/readyapi-import/postman-perf-capabilities.md",
+          "source": "skills/performance-testing/references/readyapi-import/postman-perf-capabilities.md",
+          "bytes": 4179,
+          "sha256": "da9d7d05fe7dcf5df257fef2da430210b2386997b21267471c9449a5dd6a9442"
+        },
+        {
+          "target": "references/readyapi-import/script-translation.md",
+          "source": "skills/performance-testing/references/readyapi-import/script-translation.md",
+          "bytes": 6111,
+          "sha256": "1fb584828f4cdc6fdefc1aab2ad147cfb4a4de0e873bad0b921a0a412aec80c5"
+        }
+      ]
+    },
+    {
+      "name": "postman-mcp-server",
+      "plugin": "postman",
+      "description": "Use when working through Postman MCP tools to inspect or change workspace resources, choose a targeted operation, or handle MCP limitations. Supports hosted workflows when the CLI is unavailable and distinguishes tool completion from a usable result. Not for testing an MCP server itself; that is mcp-testing. Use for requests such as \"use Postman MCP to inspect this collection\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/postman-mcp-server/SKILL.md",
+          "bytes": 4238,
+          "sha256": "3e9136d4b0fc2d1816971857f6b9872e9911ce94957613b18979f25d9dd710a5"
+        },
+        {
+          "target": "references/docs.md",
+          "source": "skills/postman-mcp-server/references/docs.md",
+          "bytes": 3449,
+          "sha256": "2cc306e7de00fa9bec323059b8909132b3006e50ff1d6aad041e492abf86309b"
+        },
+        {
+          "target": "references/learn.md",
+          "source": "skills/postman-mcp-server/references/learn.md",
+          "bytes": 3862,
+          "sha256": "8c9ba33a56a35dbd11e44c762d476686017b6f666ae721bbc95a869cde1bae58"
+        },
+        {
+          "target": "references/mcp-limitations.md",
+          "source": "skills/postman-mcp-server/references/mcp-limitations.md",
+          "bytes": 1691,
+          "sha256": "953620dd3367af85616d3b4daa46dbfaec27cfec360e58268d1af0617ab3212a"
+        },
+        {
+          "target": "references/mock.md",
+          "source": "skills/postman-mcp-server/references/mock.md",
+          "bytes": 3689,
+          "sha256": "68a3da1536218debc58d0efee1d0c675bf08d4fe26ed3ff39adb5cd44a00893a"
+        },
+        {
+          "target": "references/search.md",
+          "source": "skills/postman-mcp-server/references/search.md",
+          "bytes": 3656,
+          "sha256": "7e090b75ec025daa9110bbddd3243b19049c3da16d930397d422d88c87355c02"
+        },
+        {
+          "target": "references/security.md",
+          "source": "skills/postman-mcp-server/references/security.md",
+          "bytes": 4644,
+          "sha256": "4686052ba4902e80d7bc8d7aae2ad7bc132a3076e7f22b1f2f6d1f1ce99e2a4a"
+        },
+        {
+          "target": "references/setup.md",
+          "source": "skills/postman-mcp-server/references/setup.md",
+          "bytes": 5535,
+          "sha256": "8bda834d23ab125c3c556086972300d58b10f20c877a08e7b8236668f7bd6bf3"
+        },
+        {
+          "target": "references/sync.md",
+          "source": "skills/postman-mcp-server/references/sync.md",
+          "bytes": 3932,
+          "sha256": "427ffa5b02a888185e38c75efeece5e85c4418e2ebbfe45dfe937d3ee1ebd21e"
+        },
+        {
+          "target": "references/test.md",
+          "source": "skills/postman-mcp-server/references/test.md",
+          "bytes": 3031,
+          "sha256": "b8a0996727d8990a95dd767d88c984fbd6cc1c63b9cc7ad6029a6f4d1d102d02"
+        }
+      ]
+    },
+    {
+      "name": "variables",
+      "plugin": "postman",
+      "description": "Use when parameterizing requests across environments, choosing variable scopes, chaining values in scripts, or referencing credentials without committing or exposing them. Keeps one reusable collection while separating target configuration from secret values. Use for requests such as \"where should I put this API key\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/variables/SKILL.md",
+          "bytes": 3362,
+          "sha256": "9294ef74ac2bd7d8933b784d4919d203ce4fda05dc33ee1f455774c888e28dcc"
+        }
+      ]
+    },
+    {
+      "name": "webhook-testing",
+      "plugin": "postman",
+      "description": "Use when writing, debugging or testing code that receives HTTP callbacks (webhooks) from another system, or testing webhooks your API sends, whether or not Postman is mentioned. Gives a reusable public URL that captures deliveries, forwards them to localhost and replays them, keeps sender configuration across sessions, and records arrivals even while forwarding is stopped, so delivery failures can be told apart from local connectivity problems. Use for requests such as \"get payment events to localhost\" or \"replay an event after a fix\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/webhook-testing/SKILL.md",
+          "bytes": 6137,
+          "sha256": "6e37a4bf4d967d910bc90eca76c12383a20070f6967feae5d7847bddd330ae86"
+        },
+        {
+          "target": "reference/forwarding.md",
+          "source": "skills/webhook-testing/reference/forwarding.md",
+          "bytes": 442,
+          "sha256": "ab14ce650ea96b6ad2d41dcb82629048054db0a86ba599db124804adca0d1f14"
+        },
+        {
+          "target": "reference/outbound_webhooks.md",
+          "source": "skills/webhook-testing/reference/outbound_webhooks.md",
+          "bytes": 1248,
+          "sha256": "3eaaf849da1ee7a38de09c2dc6303fef5c044f6ec6e0a6ffe6e9dedf3d99e4a3"
+        },
+        {
+          "target": "reference/webhook_scripts.md",
+          "source": "skills/webhook-testing/reference/webhook_scripts.md",
+          "bytes": 6828,
+          "sha256": "afc392d3e0573ef9f9b3061fe12b777eee2b8b93be7d660f4657ed251fc057b2"
+        }
+      ]
+    },
+    {
+      "name": "workspaces",
+      "plugin": "postman",
+      "description": "Use when initializing Postman in a repository, binding it to a Postman workspace, interpreting what `postman init` did, or handling CLI-suggested actions for authentication, plan, credits, usage quota, or subscription restrictions. Treats the workspace as the place where a service's API work and its evidence live, kept separate from the services it depends on. Use for requests such as \"set up Postman in this repo\" or \"connect this repo to our workspace\".",
+      "files": [
+        {
+          "target": "SKILL.md",
+          "source": "skills/workspaces/SKILL.md",
+          "bytes": 3818,
+          "sha256": "118c18eacf29aa5db1b572897a08f1385603c6a5654429be6e0b45a798a52b8c"
+        }
+      ]
+    }
+  ]
+}
